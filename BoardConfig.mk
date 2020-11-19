@@ -40,7 +40,7 @@ BOARD_MKBOOTIMG_ARGS := \
 	--ramdisk_offset 0x04f88000 \
 	--second_offset 0x00000000 \
 	--tags_offset 0x03f88000 \
-	--board omega
+	--board nikel
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE:=2684354560
@@ -67,7 +67,7 @@ TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_INCLUDE_CRYPTO := true
 #Use old default.prop
-TARGET_RECOVERY_DEVICE_DIRS += device/xiaomi/omega
+TARGET_RECOVERY_DEVICE_DIRS += device/xiaomi/nikel
 
 TW_DEFAULT_EXTERNAL_STORAGE := true
-TARGET_PREBUILT_KERNEL := device/xiaomi/omega/kernel
+TARGET_PREBUILT_KERNEL := device/xiaomi/nikel/kernel

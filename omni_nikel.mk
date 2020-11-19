@@ -1,15 +1,15 @@
 # Release name
-PRODUCT_RELEASE_NAME := omega
+PRODUCT_RELEASE_NAME := nikel
 
 # Inherit device configuration
-$(call inherit-product, device/xiaomi/omega/device_omega.mk)
+$(call inherit-product, device/xiaomi/nikel/device_nikel.mk)
 
 ## Device identifier. This must come after all inclusions
 
-PRODUCT_DEVICE := omega
-PRODUCT_NAME := omni_omega
+PRODUCT_DEVICE := nikel
+PRODUCT_NAME := omni_nikel
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi Pro
+PRODUCT_MODEL := Redmi Note 4
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Time Zone data for recovery

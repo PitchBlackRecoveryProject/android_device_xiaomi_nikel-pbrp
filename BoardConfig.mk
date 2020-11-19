@@ -66,6 +66,8 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_INCLUDE_CRYPTO := true
+PB_TORCH_PATH := "/sys/class/leds/flashlight:torch_0"
+
 #Use old default.prop
 TARGET_RECOVERY_DEVICE_DIRS += device/xiaomi/nikel
 

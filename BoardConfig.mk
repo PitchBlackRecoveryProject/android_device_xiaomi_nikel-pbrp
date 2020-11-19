@@ -71,3 +71,9 @@ TARGET_RECOVERY_DEVICE_DIRS += device/xiaomi/nikel
 
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TARGET_PREBUILT_KERNEL := device/xiaomi/nikel/kernel
+
+# exFAT FS Support
+TW_INCLUDE_FUSE_EXFAT := true
+
+# NTFS Support
+TW_INCLUDE_FUSE_NTFS := true

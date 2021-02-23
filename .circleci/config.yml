@@ -1,0 +1,38 @@
+version: 2.1
+executors:
+  worker:
+    docker:
+      - image: fr3akyphantom/droid-builder:latest
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+jobs:
+  build:
+    executor: worker
+    environment:
+      MANIFEST_BRANCH: 'android-6.0'
+      PBRP_BRANCH: 'reza'
+      VENDOR: 'xiaomi'
+      CODENAME: 'nikel'
+      FLAVOR: 'eng'
+      TEST_BUILD: 'true'
+      # PB_OFFICIAL: 'true'
+      MAINTAINER: '@Reza_Adi_Pangestu'
+      CHANGELOG: |
+        - Test
+    working_directory: /home/builder/pitchblack
+    steps:
+      - run:
+          name: AIO Build
+          command: |
+            wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb/build.sh
+            source build.sh
+workflows:
+  version: 2.1
+  build_and_test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: 'android-6.0'
+          context: org-global
